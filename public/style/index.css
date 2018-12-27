@@ -1,0 +1,115 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.chat-holder{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 52px;
+    width: 300px;
+    background-color: rgba(255,255,255, 0.8);
+    border-top-left-radius: 6px;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header{
+    cursor: pointer;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    background-color: #fff;
+    border-top-left-radius: 6px;
+
+}
+
+.closed .chat-body, .closed .chat-footer, .close .chat-body, .close .chat-footer{
+    display: none;
+}
+
+.open {
+    animation-name: open;
+}
+
+.close {
+    animation-name: close;
+}
+
+@keyframes open{
+    from{ height: 52px;}
+    to{ height: 550px;}
+}
+
+@keyframes close {
+    from{ height: 550px;}
+    to{ height: 52px;}
+}
+
+.chat-body{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    overflow-y: auto;
+}
+
+.bubble{
+    max-width: 80%;
+    padding:0;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.watson{
+    align-self: flex-start;
+    background-color: rgb(94, 169, 255);
+}
+
+.user{
+    align-self: flex-end;
+    background-color: rgb(247, 247, 247);
+}
+
+.chat-footer{
+    height: 44px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.chat-input{
+    font-size: 12pt;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0 10px;
+    height: 44px;
+    flex:1;
+}
+
+.send-btn{
+    background: none;
+    width: 44px;
+    height: 44px;
+    background-image: url('/icons/send.png');
+    background-position: center;
+    background-size: 33px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    outline: none;
+    border:none;
+}

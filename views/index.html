@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assitant - Demo</title>
+    <link href="/style/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="chat-holder closed" id="chat-holder">
+        <div class="chat-header" onclick="chatToggle()">
+            <div>Watson Assitant</div>
+        </div>
+        <div class="chat-body" id="chat-body">
+        </div>
+        <div class="chat-footer">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Type a message" onkeypress="handleKeyPress(event)"/>
+            <button class="send-btn" onclick="sendMessage()"></button>
+        </div>
+    </div>
+    <script src="/js/xhr.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>
