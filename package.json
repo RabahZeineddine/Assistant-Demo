@@ -18,7 +18,9 @@
   "homepage": "https://github.com/RabahZeineddine/Assistant-Demo#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "watson-developer-cloud": "^3.15.0"
   }
 }

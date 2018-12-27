@@ -15,7 +15,7 @@ function chatToggle() {
     // for the first toggle
     if (chatHolder.className.indexOf('closed') != - 1) {
         currentClass = 'closed'
-        sendToWatson(' ')
+        sendToWatson('Olá')
     }
     chatHolder.className = chatHolder.className.replace(currentClass, toggleClass)
     openChat = !openChat
@@ -42,16 +42,17 @@ function sendToWatson(message) {
     xhrPost(WATSON_API, params, (watsonData) => {
         showWatsonResponse(watsonData)
     }, (err) => {
-
+        console.log(err)
     })
 }
 
 function showWatsonResponse(watsonData) {
+    console.log(JSON.stringify(watsonData, null, 2))
     var action = watsonData.output.action || null
     switch (action) {
 
         default:
-            watsonData.output.text.forEach((text) => displayMessage(text, WATSON))
+            watsonData.output.generic.forEach((el) => displayMessage(el.text, WATSON))
             break;
     }
 }
