@@ -1,0 +1,24 @@
+{
+  "name": "assistant-demo",
+  "version": "1.0.0",
+  "description": "Assistant-Demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RabahZeineddine/Assistant-Demo.git"
+  },
+  "author": "Rabah Zeineddine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RabahZeineddine/Assistant-Demo/issues"
+  },
+  "homepage": "https://github.com/RabahZeineddine/Assistant-Demo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
